@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import Question from './components/Question';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Classes from './Classes';
+import Classes from './pages/Classes/Classes';
 
 
 function App() {
@@ -11,21 +11,23 @@ function App() {
   };
 
   return (
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <div>
-                <button onClick={redirectToClasses}>Login</button>
-              </div>
-            }
-          />
-          <Route path="/classes" element={<Classes />} />
-        </Routes>
-      </div>
-    </Router>
+    <>
+      <Router>
+        <div className="App">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <div>
+                  <button onClick={redirectToClasses}>Login</button>
+                </div>
+              }
+            />
+            <Route path="/classes" element={<Classes />} />
+          </Routes>
+        </div>
+      </Router>
+    </>
   );
 }
 
