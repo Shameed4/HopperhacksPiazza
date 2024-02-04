@@ -1,6 +1,10 @@
 import React from 'react'
 import "./Login.css"
 
+const checkLogin = () => {
+  window.location.href = "/classes";
+}
+
 const Login = () => {
   return (
     <>
@@ -17,7 +21,7 @@ const Login = () => {
             <input type="password" class="form-control" placeholder="Password" aria-label="Recipient's username"
               aria-describedby="basic-addon2" />
           </div>
-          <button type="button" class="btn btn-primary">Login</button>
+          <button onClick={checkLogin} type="button" class="btn btn-primary">Login</button>
         </div>
       </div>
 
